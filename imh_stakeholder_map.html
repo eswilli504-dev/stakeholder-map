@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Psychiatric Case Management: Stakeholder Relationship Map</title>
+<style>
+:root{--bg:#F8FAFC;--ink:#17212B;--mu:#566573;--cm:#5B6B7A;--ho:#0B6E6E;--bn:#B42318;--am:#B26A00;--inf:#6D5BA8;--il:#6F7C88;--nf:#FFFFFF;--ns:#8795A3;--cf:#17324D;--sf:#E6ECF2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F151B;--ink:#E7EDF2;--mu:#9AA8B5;--cm:#9FB1C2;--ho:#4FD1C5;--bn:#FF8A80;--am:#F4B24E;--inf:#B9A9F2;--il:#94A1AD;--nf:#18222B;--ns:#566676;--cf:#2F6496;--sf:#223040}}
+:root[data-theme="dark"]{--bg:#0F151B;--ink:#E7EDF2;--mu:#9AA8B5;--cm:#9FB1C2;--ho:#4FD1C5;--bn:#FF8A80;--am:#F4B24E;--inf:#B9A9F2;--il:#94A1AD;--nf:#18222B;--ns:#566676;--cf:#2F6496;--sf:#223040}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 ui-sans-serif,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+main{max-width:1120px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:1.5rem;line-height:1.25;margin:0 0 4px}
+.sub{color:var(--mu);margin:0 0 12px;max-width:72ch}
+.bar{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;margin:12px 0}
+.bar label{display:flex;gap:6px;align-items:center;cursor:pointer}
+button{font:inherit;padding:6px 12px;border:1px solid var(--ns);background:var(--nf);color:var(--ink);border-radius:6px;cursor:pointer}
+button:focus-visible,input:focus-visible,.hit:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.wrap{overflow-x:auto;border:1px solid var(--ns);border-radius:8px}
+#panel{margin-top:14px;border:1px solid var(--ns);border-radius:8px;padding:14px 16px;background:var(--nf);min-height:96px}
+#panel h2{font-size:1.1rem;margin:0 0 6px}#panel p{margin:6px 0;max-width:80ch}
+.chip{display:inline-block;font-size:.8rem;border:1px solid var(--ns);border-radius:99px;padding:1px 10px;margin:0 6px 4px 0}
+.key{color:var(--mu);font-size:.85rem;margin-top:12px;max-width:100ch}
+#st{color:var(--mu);font-size:.9rem}
+svg{display:block;min-width:760px;width:100%;height:auto}
+</style>
+<style id="sc">
+.nd{fill:var(--nf);stroke:var(--ns);stroke-width:1.5}
+.nd.cm{fill:var(--cf);stroke:var(--cf)}.nd.sys{fill:var(--sf)}.nd.il{fill:var(--bg);stroke:var(--il);stroke-dasharray:4 3}
+.zn{fill:none;stroke:var(--il);stroke-width:1.5;stroke-dasharray:6 4}
+svg text{font-family:ui-sans-serif,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;fill:var(--ink);font-size:14px;text-anchor:middle}
+svg text.tw{fill:#fff}svg text.sm{font-size:11.5px;fill:var(--mu)}svg text.tw.sm{fill:#DCE6F0}svg text.tl{text-anchor:start}
+svg text.mg{fill:var(--bg);font-weight:700;font-size:14px}svg text.h{font-size:15px;font-weight:700}
+.ln{fill:none;stroke-linecap:round}.ln.c{stroke:var(--cm);stroke-width:2.2}.ln.h{stroke:var(--ho);stroke-width:4.5}
+.ln.i{stroke:var(--inf);stroke-width:2.8;stroke-dasharray:7 5}.ln.l{stroke:var(--il);stroke-width:2.4;stroke-dasharray:3 4}
+.ah.h{fill:var(--ho)}.ah.i{fill:var(--inf)}.ah.l{fill:var(--il)}
+.ht{stroke:transparent;stroke-width:16;fill:none}.hit{cursor:pointer}
+.mb{fill:var(--bn);stroke:var(--bg);stroke-width:1.5}.ma{fill:var(--am);stroke:var(--bg);stroke-width:1.5}.ma.i{stroke:var(--ink);stroke-dasharray:3 2}
+.sel>.nd{stroke:var(--ink);stroke-width:3.5}.sel>.ln{stroke-width:7}.sel>.mb,.sel>.ma{stroke:var(--ink);stroke-width:3}
+.h-inf [data-l~=inf],.h-ill [data-l~=ill],.h-bn [data-l~=bn],.h-am [data-l~=am]{display:none}
+</style></head>
+<body><main>
+<h1>Psychiatric case management: stakeholder relationship map</h1>
+<p class="sub">Draft 1, built from your Case Manager Stakeholder Map workbook. The map is centered on the case manager because your table is written from that role’s perspective. It shows documented relationships, not reporting lines. Select any item for the evidence behind it.</p>
+<div class="bar" role="group" aria-label="Map layers">
+<label><input type="checkbox" data-t="inf" checked> Inferred connections</label>
+<label><input type="checkbox" data-t="ill" checked> Illustrative research examples</label>
+<label><input type="checkbox" data-t="bn" checked> Bottlenecks</label>
+<label><input type="checkbox" data-t="am" checked> Unclear responsibility</label>
+<span id="xb" hidden><button id="bp">Download PNG</button> <button id="bs">Download SVG</button></span>
+<span id="xn" class="key" hidden>Downloads are available when this page is opened in Claude.</span>
+<span id="st" role="status"></span>
+</div>
+<div class="wrap"><svg id="map" viewBox="0 0 1000 910" role="img" aria-label="Stakeholder relationship network map centered on the case manager"></svg></div>
+<div id="panel" aria-live="polite"><h2>Details</h2><p>Select a stakeholder, connection or marker to see what your table says about it, and whether it is documented, inferred or illustrative.</p></div>
+<p class="key">Source key: R3 Continuity &amp; Transition, R4 Risk Surveillance &amp; Early Intervention, R5 Information Integration Across Teams, R6 Crisis Coordination &amp; Escalation, R7 Therapeutic Engagement &amp; Family Support, R8 Documentation &amp; Care-Plan Updates. C is a daily task number, P is a pain point number, Q is the quotation column.</p>
+</main>
+<script>
+const NS='http://www.w3.org/2000/svg',W=1000,H=910,svg=document.getElementById('map');
+const el=(t,a,p)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e};
+const ST={d:'Documented in your table',i:'Inferred, needs your confirmation',l:'Illustrative research example, not a confirmed IMH workflow participant'};
+// nodes: key:[x,y,w,h,kind,lines,status,description,basis]
+const N={
+cm:[500,390,190,76,'cm',['Case manager','(care coordinator)'],'d','Central role. Your table uses four labels for it: “Case management/Care Coordination,” “Care Coordination Role,” “Case Coordination Role” and “Therapeutic Role/Care Coordination.” I treated them as one role.','All six responsibility areas'],
+team:[500,110,300,110,'',['Multidisciplinary clinical team'],'d','Physicians and nurses are named together in R5-C3. They are grouped inside the team to avoid duplication; that grouping is a simplification, not a statement in your table.','R3-C1, R4-C4, R5-C1, R5-C3, R8-C4'],
+pt:[115,250,150,56,'',['Patient'],'d','Receives the post-discharge contact within 2 working days, wellbeing and adherence monitoring, and engagement support.','R3-C4, R4-C1, R7-C1'],
+fm:[115,500,150,56,'',['Caregivers','/ families'],'d','Contacted after discharge, raise concerns, and receive instructions and support. Your table treats caregivers and families together.','R3-C3–4, R4-C2, R5-C3, R6-C5, R7-C1–2'],
+op:[885,160,170,60,'',['Outpatient providers'],'d','Receive appointments coordinated by the case manager and depend on timely discharge information.','R3-C3, R3-P1'],
+cp:[885,330,170,60,'',['Community partners','& services'],'d','Community services (R3-C3), community partners (R5-C3) and community mental-health services (R3-P3) are named separately. I combined them into one node for readability.','R3-C3, R3-P3, R5-C3–4'],
+pv:[885,500,190,66,'',['Other healthcare providers','(roles unspecified)'],'d','Your table says “relevant clinical professionals” (R6-C4), “healthcare providers” (R6-P1), “responsible providers” (R5-C5) and “other providers” (R8-P2) without naming roles. I show them as one unspecified group; please review that simplification.','R6-C4, R6-P1, R5-C5, R8-P2'],
+cr:[760,690,180,60,'',['Crisis team','/ response services'],'d','R6-P2 also mentions “crisis-response agencies.” Treating them as the same group as the crisis team is my inference.','R6-C4–5, R6-P1–3'],
+rc:[500,690,190,70,'sys',['Clinical record system','(non-human system)'],'d','Not a person or team. Every responsibility area documents into this system, and your table describes it as disconnected or not integrated with behavioral health information.','R3-C6 through R8-C2, R5-P1, R8-P2'],
+ps:[300,665,120,54,'il',['Psychiatrist','(research example)'],'l','Appears only in a quotation from a cited study. Illustrative research example, not a confirmed participant in the IMH workflow.','R5-Q'],
+ph:[300,722,120,54,'il',['PHC physician','(research example)'],'l','Appears only in a quotation from a cited study. Illustrative research example, not a confirmed participant in the IMH workflow.','R5-Q'],
+po:[110,690,130,46,'il',['Police','(research example)'],'l','Appears only in a quotation from an interviewed provider whose professional role is not established. Illustrative research example, not a confirmed participant in the IMH workflow.','R6-Q']};
+// edges: [id,from,to,type(c comm/h handoff),status,title,text,basis]
+const E=[
+['e1','cm','pt','c','d','Case manager ↔ Patient','Direct contact: the 2-working-day post-discharge call, ongoing wellbeing and adherence monitoring, and engagement.','R3-C4, R4-C1–3, R7-C1'],
+['e2','cm','fm','c','d','Case manager ↔ Caregivers / families','Contact with the patient or caregiver after discharge, caregiver-reported concerns, and coordination of communication during a crisis.','R3-C4, R4-C2, R5-C3, R6-C5, R7-C1–2'],
+['e3','cm','team','c','d','Case manager ↔ Multidisciplinary clinical team','Collaboration on discharge and continuing-care plans, receiving updates, clarifying needs with physicians and nurses, and communicating significant care-plan changes.','R3-C1–2, R4-C4, R5-C1, R5-C3, R7-C5, R8-C4'],
+['e5','cm','op','h','d','Handoff: case manager → Outpatient providers','The case manager coordinates outpatient appointments as part of the discharge and continuing-care plan.','R3-C3'],
+['e6','cm','cp','c','d','Case manager ↔ Community partners & services','Coordinating services and referrals and communicating with community partners to clarify patient needs.','R3-C3, R5-C3–4'],
+['e7','cm','cr','h','d','Handoff: case manager → Crisis team','Activates crisis-response services and coordinates communication among the patient, caregivers, crisis team and providers, following established protocols that your table does not specify.','R6-C4–5'],
+['e8','cm','pv','h','d','Handoff: case manager → Other healthcare providers','Notifies relevant clinical professionals during a crisis. The case manager also escalates concerns when necessary (R3-C5), with no recipient named.','R6-C4, R3-C5'],
+['e9','cr','pv','c','d','Crisis team ↔ Healthcare providers','Documented through a pain point: poor communication between these groups can delay coordinated responses and handoffs.','R6-P1'],
+['e10','cm','rc','c','d','Case manager ↔ Clinical record system','Reviews existing records and documents contacts, assessments, interventions and follow-up in every responsibility area.','R3-C6, R4-C6, R5-C2, R5-C6, R6-C6, R7-C6, R8-C1–2'],
+['e11','pv','rc','c','d','Other providers ↔ Clinical record system','Other providers use the same system; your table notes behavioral health information may be inaccessible to them.','R5-P1, R8-P2'],
+['e14','team','op','h','i','Inferred: discharge information → Outpatient providers','Your table describes delayed or incomplete discharge information reaching outpatient providers but does not say who sends it. I inferred the hospital team as the source. Please confirm or remove.','R3-P1 (inference)'],
+['e12','cm','ps','c','l','Illustrative: case manager reminds psychiatrist','A case manager quoted in a cited study calls to remind the psychiatrist to send notes. Not a confirmed IMH workflow step.','R5-Q'],
+['e13','ps','ph','h','l','Illustrative: psychiatrist → PHC physician','In the same quotation, the psychiatrist’s notes are faxed to the PHC physician. Not a confirmed IMH workflow step.','R5-Q'],
+['e15','cm','po','h','l','Illustrative: case manager → Police','A provider quoted in a Chicago study describes calling police to escalate a behavioral-health crisis. Not a confirmed IMH workflow step.','R6-Q']];
+// markers: [id,kind(b/a),on,t,status,title,text,basis]
+const M=[
+['m1','b','e:e1',.5,'d','Difficulty reaching patients','Missed appointments and difficulty contacting patients delay wellbeing checks and recognition of changes in mental health.','R3-P4, R4-P1, R7-P1'],
+['m2','b','e:e5',.35,'d','Discharge information and follow-up gaps','Discharge information can be delayed or incomplete, and follow-up appointments are not always scheduled before discharge.','R3-P1–2'],
+['m3','b','n:cp','','d','Limited community services and staffing','Shortages can delay access to aftercare even when needs have been identified.','R3-P3'],
+['m4','b','n:rc','','d','Disconnected records and restricted access','Disconnected systems, behavioral health data that is not integrated, and restrictions on sensitive records leave care plans incomplete or hard to reach.','R5-P1, R8-P2, R8-P4'],
+['m5','b','e:e2',.5,'d','Confidentiality and limited family communication','Uncertainty about information-sharing permissions delays communication with families, and limited caregiver contact hides changes in wellbeing.','R5-P4, R7-P2'],
+['m6','b','e:e6',.4,'d','Confidentiality with community partners','Uncertainty about information-sharing permissions can delay communication with community partners.','R5-P4'],
+['m7','b','e:e3',.3,'d','Inconsistent team communication','Can delay referrals, duplicate work and leave care updates unresolved.','R5-P2'],
+['m8','b','e:e9',.5,'d','Crisis team and provider communication','Poor communication can delay coordinated responses and patient handoffs.','R6-P1'],
+['m9','b','n:cr','','d','Crisis staffing and service shortages','Can delay access to intervention and stabilization.','R6-P3'],
+['m10','b','n:cm','','d','Workload, documentation and emotional load','Node-level pressure, not a connection: heavy caseloads, extensive and duplicate documentation, and emotional strain from safety responsibility, crises and family distress.','R4-P3–4, R6-P4, R7-P3–4, R8-P1, R8-P3'],
+['m11','b','n:cm','','d','Incomplete or outdated risk assessments','Can leave care coordinators without an accurate picture of emerging concerns. Your table does not say where assessments originate.','R4-P2'],
+['a1','a','e:e3',.5,'d','Accountability across departments is unclear','Unclear responsibilities across departments make it hard to know who is accountable for completing follow-up actions. The departments are not named in your table.','R5-P3'],
+['a2','a','n:cr','','d','Who leads between crisis-response agencies','Unclear responsibilities can create confusion about who leads interventions or authorizes next steps.','R6-P2'],
+['a3','a','e:e14',.5,'i','Who sends discharge information?','Inferred gap: the table describes the delay but does not name who is responsible for sending discharge information.','R3-P1, R3-C1–3'],
+['a4','a','e:e5',.7,'i','Who owns scheduling follow-up before discharge?','Inferred gap: R3-C3 says the case manager coordinates appointments, while R3-P2 says they are not always scheduled. Ownership is not stated.','R3-C3, R3-P2'],
+['a5','a','n:pv','','i','Unnamed recipients and protocols','Inferred gap: “escalate concerns,” “relevant clinical professionals,” “responsible providers” and “established protocols” are not tied to named roles or documents.','R3-C5, R5-C5, R6-C4'],
+['a6','a','e:e3',.7,'i','Who decides early-intervention strategy?','Inferred gap: the case manager collaborates with the care team to decide, but no decision-maker is named.','R4-C4']];
+// ---- draw
+el('rect',{width:W,height:H,fill:'var(--bg)'},svg);
+const defs=el('defs',{},svg);
+['h','i','l'].forEach(k=>{const m=el('marker',{id:'ar'+k,viewBox:'0 0 10 10',refX:9,refY:5,markerWidth:4.5,markerHeight:4.5,orient:'auto'},defs);el('path',{d:'M0,0L10,5L0,10z',class:'ah '+k},m)});
+const D=[];
+function mkItem(g,o){g.classList.add('hit');g.setAttribute('tabindex','0');g.setAttribute('role','button');g.setAttribute('aria-label',o.title);
+ g.addEventListener('click',()=>show(o,g));g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show(o,g)}})}
+const nodeGeom=k=>({x:N[k][0],y:N[k][1],w:N[k][2],h:N[k][3]});
+function clip(n,tx,ty){const dx=tx-n.x,dy=ty-n.y;const s=Math.min(dx?n.w/2/Math.abs(dx):1e9,dy?n.h/2/Math.abs(dy):1e9);return[n.x+dx*s,n.y+dy*s]}
+// illustrative zone
+const zg=el('g',{'data-l':'ill'},svg);
+el('rect',{x:20,y:590,width:360,height:190,rx:12,class:'zn'},zg);
+el('text',{x:34,y:752,class:'tl h'},zg).textContent='Illustrative research examples';
+el('text',{x:34,y:769,class:'tl sm'},zg).textContent='Not confirmed IMH workflow participants';
+// edges
+const EG={};
+E.forEach(r=>{const[id,a,b,ty,st,title,text,basis]=r,A=nodeGeom(a),B=nodeGeom(b);
+ const[x1,y1]=clip(A,B.x,B.y),[x2,y2]=clip(B,A.x,A.y);EG[id]=[x1,y1,x2,y2];
+ const g=el('g',{},svg);if(st==='i')g.setAttribute('data-l','inf');if(st==='l')g.setAttribute('data-l','ill');
+ el('line',{x1,y1,x2,y2,class:'ht'},g);
+ const cls=st==='d'?ty:st,ln=el('line',{x1,y1,x2,y2,class:'ln '+cls},g);
+ if(ty==='h')ln.setAttribute('marker-end','url(#ar'+(st==='d'?'h':st)+')');
+ mkItem(g,{title,text,basis,st,kind:ty==='h'?'Handoff':'Communication'});});
+// nodes
+function drawNode(k){const[x,y,w,h,kd,lines,st,text,basis]=N[k];
+ const g=el('g',{},svg);if(kd==='il')g.setAttribute('data-l','ill');
+ if(kd==='sys'){const x0=x-w/2,y0=y-h/2,ry=10;
+  el('path',{d:`M${x0},${y0+ry}a${w/2},${ry} 0 0 1 ${w},0v${h-2*ry}a${w/2},${ry} 0 0 1 ${-w},0z`,class:'nd sys'},g);
+  el('path',{d:`M${x0},${y0+ry}a${w/2},${ry} 0 0 0 ${w},0`,class:'nd sys',fill:'none'},g)}
+ else el('rect',{x:x-w/2,y:y-h/2,width:w,height:h,rx:10,class:'nd '+kd},g);
+ const top=k==='team'?y-h/2+30:y-(lines.length-1)*9+5+(kd==='sys'?8:0);
+ lines.forEach((t,i)=>{const e=el('text',{x,y:top+i*18,class:(kd==='cm'?'tw ':'')+(t[0]==='('?'sm':'')+(k==='cm'&&i===0?' h':'')},g);e.textContent=t});
+ if(k==='team'){const cw=176;el('rect',{x:x-cw/2,y:y+4,width:cw,height:30,rx:15,fill:'var(--sf)',stroke:'var(--ns)'},g);
+  const c=el('text',{x,y:y+24},g);c.textContent='Physicians & nurses'}
+ mkItem(g,{title:lines.join(' ').replace(/\(|\)/g,''),text,basis,st,kind:kd==='sys'?'Non-human system':'Stakeholder'})}
+Object.keys(N).forEach(drawNode);
+// markers
+const cnt={};
+M.forEach(r=>{const[id,kd,on,t,st,title,text,basis]=r;let x,y;
+ if(on[0]==='e'){const p=EG[on.slice(2)];x=p[0]+(p[2]-p[0])*t;y=p[1]+(p[3]-p[1])*t}
+ else{const k=on.slice(2),n=nodeGeom(k);cnt[k]=(cnt[k]||0);x=n.x+n.w/2-6-cnt[k]*28;y=n.y-n.h/2;cnt[k]++}
+ const g=el('g',{transform:`translate(${x},${y})`,'data-l':(kd==='b'?'bn':'am')+(st==='i'?' inf':'')},svg);
+ if(kd==='b'){el('polygon',{points:'0,-13 13,10 -13,10',class:'mb'},g);el('text',{y:7,class:'mg'},g).textContent='!'}
+ else{el('circle',{r:12,class:'ma'+(st==='i'?' i':'')},g);el('text',{y:5,class:'mg'},g).textContent='?'}
+ mkItem(g,{title,text,basis,st,kind:kd==='b'?'Potential bottleneck':'Unclear responsibility'})});
+// legend
+const lg=el('g',{},svg);el('line',{x1:20,y1:798,x2:980,y2:798,stroke:'var(--ns)'},lg);
+el('text',{x:30,y:822,class:'tl h'},lg).textContent='How to read this map';
+const cols=[30,350,670],rows=[848,876,904-0];
+const lab=(c,r,t)=>{const e=el('text',{x:cols[c]+58,y:rows[r]+4,class:'tl'},lg);e.textContent=t;e.style.fontSize='12.5px'};
+const ln=(c,r,cl,mk)=>{const l=el('line',{x1:cols[c],y1:rows[r],x2:cols[c]+46,y2:rows[r],class:'ln '+cl},lg);if(mk)l.setAttribute('marker-end','url(#ar'+mk+')')};
+ln(0,0,'c');lab(0,0,'Documented communication');
+ln(1,0,'h','h');lab(1,0,'Documented handoff (arrow shows direction)');
+ln(2,0,'i');lab(2,0,'Inferred connection (please confirm)');
+ln(0,1,'l');lab(0,1,'Illustrative research example');
+el('polygon',{points:`${cols[1]+23},${rows[1]-11} ${cols[1]+34},${rows[1]+9} ${cols[1]+12},${rows[1]+9}`,class:'mb'},lg);lab(1,1,'Potential bottleneck (from pain points)');
+el('circle',{cx:cols[2]+23,cy:rows[1],r:10,class:'ma'},lg);lab(2,1,'Unclear responsibility stated in your table');
+el('path',{d:`M${cols[0]+6},${rows[2]-6}a17,5 0 0 1 34,0v12a17,5 0 0 1 -34,0z`,class:'nd sys'},lg);lab(0,2,'Non-human system');
+el('circle',{cx:cols[1]+23,cy:rows[2],r:10,class:'ma i'},lg);lab(1,2,'Unclear responsibility inferred by me (dashed)');
+// ---- interaction
+const P=document.getElementById('panel');
+const ph=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;e.textContent=x;return e};
+function show(o,g){svg.querySelectorAll('.sel').forEach(x=>x.classList.remove('sel'));g.classList.add('sel');
+ P.replaceChildren(ph('h2','',o.title),ph('span','chip',o.kind),ph('span','chip',ST[o.st]||ST.d),ph('p','',o.text),ph('p','','Basis in your table: '+o.basis))}
+document.querySelectorAll('[data-t]').forEach(c=>c.onchange=()=>svg.classList.toggle('h-'+c.dataset.t,!c.checked));
+// ---- export
+let dl=null;const xb=document.getElementById('xb'),xn=document.getElementById('xn'),st=document.getElementById('st');
+(async()=>{try{dl=await window.claude.use('downloads')}catch(e){dl=null}if(dl)xb.hidden=false;else xn.hidden=false})();
+const LIGHT='--bg:#F8FAFC;--ink:#17212B;--mu:#566573;--cm:#5B6B7A;--ho:#0B6E6E;--bn:#B42318;--am:#B26A00;--inf:#6D5BA8;--il:#6F7C88;--nf:#FFFFFF;--ns:#8795A3;--cf:#17324D;--sf:#E6ECF2';
+function svgStr(){const c=svg.cloneNode(true);c.querySelectorAll('.sel').forEach(x=>x.classList.remove('sel'));
+ c.querySelectorAll('[tabindex]').forEach(x=>{x.removeAttribute('tabindex');x.removeAttribute('role');x.removeAttribute('aria-label')});
+ c.setAttribute('xmlns',NS);c.setAttribute('width',W);c.setAttribute('height',H);c.style.minWidth='0';
+ const s=document.createElementNS(NS,'style');s.textContent='svg{'+LIGHT+'}'+document.getElementById('sc').textContent;c.insertBefore(s,c.firstChild);
+ return '<?xml version="1.0" encoding="UTF-8"?>'+new XMLSerializer().serializeToString(c)}
+async function save(name,data){try{await dl.save({filename:name,data});st.textContent='Saved '+name}catch(e){st.textContent=e&&e.code==='declined'?'':'Could not save the file: '+((e&&e.message)||'unknown error')}}
+document.getElementById('bs').onclick=()=>save('imh-stakeholder-map.svg',svgStr());
+document.getElementById('bp').onclick=async()=>{try{const img=new Image();img.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svgStr());await img.decode();
+ const c=document.createElement('canvas');c.width=W*2;c.height=H*2;c.getContext('2d').drawImage(img,0,0,W*2,H*2);
+ const b=await new Promise(r=>c.toBlob(r,'image/png'));if(!b)throw new Error('PNG rendering failed');await save('imh-stakeholder-map.png',b)}catch(e){st.textContent='Could not create the PNG: '+e.message}};
+</script></body></html>
